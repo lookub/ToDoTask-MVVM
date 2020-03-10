@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    app:cardCornerRadius="8dp"
+    android:background="@color/gray50"
+    android:backgroundTint="@color/gray50"
+    android:layout_margin="8dp"
+    android:layout_marginTop="16dp"
+    card_view:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp" >
+
+        <ImageView
+            android:id="@+id/item_task_fav"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            card_view:cardCornerRadius="5dp"
+            android:layout_alignParentTop="true"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="@drawable/favorite_false" />
+
+        <ImageView
+            android:id="@+id/item_task_ctg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="invisible"
+            android:layout_marginTop="4dp"
+            card_view:cardCornerRadius="5dp"
+            android:layout_below="@+id/item_task_fav"
+            android:background="@drawable/bg_rectangle_blue" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_item_task_color"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/item_task_dates"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_below="@+id/item_task_ctg"
+            app:cardBackgroundColor="@color/cyan400"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="0dp" >
+        </androidx.cardview.widget.CardView>
+
+
+
+        <TextView
+            android:id="@+id/item_task_title"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:gravity="center_vertical"
+            android:text="Task Title"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/item_task_fav"
+            android:layout_toEndOf="@+id/item_task_fav"
+            android:layout_toStartOf="@+id/item_task_done"
+            android:layout_toLeftOf="@+id/item_task_done"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp" />
+
+
+        <TextView
+            android:id="@+id/item_task_desc"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:lines="3"
+            android:maxLines="3"
+            android:layout_below="@+id/item_task_title"
+            android:layout_alignParentStart="@+id/item_task_title"
+            android:layout_alignParentLeft="@+id/item_task_title"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/cv_item_task_color"
+            android:layout_toRightOf="@+id/cv_item_task_color"
+            android:layout_toStartOf="@+id/item_task_done"
+            android:layout_toLeftOf="@+id/item_task_done"
+            android:gravity="center_vertical"
+            android:text="Task Description\nblah blah blah\nblah blah blah" />
+
+
+        <TextView
+            android:id="@+id/item_task_dates"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/item_task_desc"
+            android:layout_alignParentStart="@+id/item_task_title"
+            android:layout_alignParentLeft="@+id/item_task_title"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/cv_item_task_color"
+            android:layout_toRightOf="@+id/cv_item_task_color"
+            android:layout_toStartOf="@+id/item_task_done"
+            android:layout_toLeftOf="@+id/item_task_done"
+            android:gravity="center_vertical"
+            android:text="DueDate : 2010-10-07" />
+
+
+
+        <ImageView
+            android:id="@+id/item_task_done"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            card_view:cardCornerRadius="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="@drawable/done_false" />
+
+
+        <ImageView
+            android:id="@+id/item_task_delete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            card_view:cardCornerRadius="5dp"
+            android:layout_toEndOf="@+id/item_task_dates"
+            android:layout_toRightOf="@+id/item_task_dates"
+            android:layout_alignTop="@+id/item_task_dates"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="@drawable/remove" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
